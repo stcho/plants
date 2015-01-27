@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\My Scripts\FieldNotebook\fieldNotebook.cs">
+    <Files>
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\FieldNotebook\fieldNotebook.cs" Line="19" Column="28" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\FieldNotebook\randomTextGenerator.cs" Line="35" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\Turtle.cs" Line="4" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\Turtle2D.cs" Line="23" Column="63" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Children\Static\wheatWeedSystem.cs" Line="6" Column="2" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Children\Animated\Special\GUISystem.cs" Line="27" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
