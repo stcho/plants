@@ -1,0 +1,57 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Parametric_L_System : MonoBehaviour {
+
+	public List<Module> returnList;
+	public Dictionary <char, List<Module>> productions;
+
+	public float animateSpeed;
+	public float growthRate;
+
+	// Use this for initialization
+	void Start () 
+	{
+		returnList = new List<Module> ();
+		productions = new Dictionary<char, List<Module>> ();
+		animateSpeed = 1.0f;
+		growthRate = 1.0f;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	public virtual float growthFunction(int gfi, float time)
+	{
+		return 0;
+	}
+}
+
+public class Module
+{
+	public char symbol;
+	public float age, terminalAge;
+	public int growthFuncIdentifier;
+	//Age, TerminalAge for production application, and a growth function identifier
+
+	public Module(char sym, float a, float term, int gfi)
+	{
+		symbol = sym;
+		age = a;
+		terminalAge = term;
+		growthFuncIdentifier = gfi;
+	}
+
+	public Module(Module m)
+	{
+		symbol = m.symbol;
+		age = m.age;
+		terminalAge = m.terminalAge;
+		growthFuncIdentifier = m.growthFuncIdentifier;
+	}
+}
+
+

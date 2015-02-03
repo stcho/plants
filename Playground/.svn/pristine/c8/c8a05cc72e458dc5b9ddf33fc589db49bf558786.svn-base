@@ -1,0 +1,85 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class wheatWeedInteractable : Parametric_L_System {
+
+	private float branchDelay = 1.0f;
+	private float apexConstant1 = 1.0f;
+	private float apexConstant2 = 0.48f;
+
+	private float internodeConstant1;
+	private float internodeConstant2;
+
+	private float lateralConstant1;
+	private float lateralConstant2;
+
+	// Use this for initialization
+	void Start () 
+	{
+		animateSpeed = 2.0f;
+		growthRate = 0.025f;
+
+		returnList = new List<Module> ();
+		productions = new Dictionary<char, List<Module>> ();
+
+		returnList.Add (new Module ('F', 0, -1, 0));
+		returnList.Add (new Module ('a', 0, 1, 0));
+
+		internodeConstant1 = apexConstant1 * (Mathf.Exp (apexConstant2) - 1);
+		internodeConstant2 = apexConstant2;
+
+		lateralConstant1 = (apexConstant1/(Mathf.Pow(branchDelay,3))*((branchDelay * apexConstant2) - 2));
+		lateralConstant2 = (apexConstant1/(Mathf.Pow(branchDelay,2))*(3 - (branchDelay * apexConstant2)));
+
+		productions.Add ('a', new List<Module>());
+		productions['a'].Add (new Module ('F', 0, -1, 2));
+		productions['a'].Add (new Module ('[', 0, -1, -1));
+		productions['a'].Add (new Module ('%', 0, -1, -1));
+		productions['a'].Add (new Module ('b', 0, branchDelay, -1));
+		productions['a'].Add (new Module (']', 0, -1, -1));
+		productions['a'].Add (new Module ('[', 0, -1, -1));
+		productions['a'].Add (new Module ('*', 0, -1, -1));
+		productions['a'].Add (new Module ('b', 0, branchDelay, -1));
+		productions['a'].Add (new Module (']', 0, -1, -1));
+		productions['a'].Add (new Module ('F', 0, -1, 0));
+		productions['a'].Add (new Module ('a', 0, 1, -1));
+
+		productions.Add ('b', new List<Module>());
+		productions['b'].Add (new Module('F', 0, -1, 1));
+		productions['b'].Add (new Module ('a', 0, 1, -1));
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+	
+	}
+
+	public override float growthFunction(int gfi, float time)
+	{
+		float growthInterval;
+		switch(gfi)
+		{
+				//'a'
+			case 0:
+			growthInterval = apexConstant1*Mathf.Exp(apexConstant2*time);
+			break;
+				//'b'
+			case 1:
+			growthInterval = (lateralConstant1*(Mathf.Pow(time,3)) + lateralConstant2*(Mathf.Pow (time,2)));
+			growthInterval = Mathf.Abs(growthInterval);
+			break;
+				//'s'
+			case 2:
+			growthInterval = internodeConstant1*Mathf.Exp(internodeConstant2*time);
+			break;
+
+			default:
+				return 75.0f;
+			break;
+		}
+
+		return growthInterval * growthRate;
+	}
+}

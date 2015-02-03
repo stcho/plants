@@ -1,0 +1,26 @@
+﻿using UnityEngine;
+
+
+public class fieldNotebook : MonoBehaviour 
+{
+	private randomTextGenerator rTG;
+
+	// Use this for initialization
+	void Start () 
+	{
+		rTG = gameObject.AddComponent<randomTextGenerator> ();
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+
+	}
+
+	void OnGUI()
+	{
+		GUI.Label (new Rect(0, 0, 100, 100), rTG.GetText());
+	}
+
+
+}

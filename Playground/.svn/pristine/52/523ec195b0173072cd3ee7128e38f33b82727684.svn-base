@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\My Scripts\L_Systems\Parametric_Turtle.cs">
+    <Files>
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\Cameras\fixedCamera.cs" Line="39" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\Parametric_Turtle.cs" Line="192" Column="94" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\Turtle.cs" Line="173" Column="48" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\FieldNotebook\fieldNotebook.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\Parametric_L_System.cs" Line="47" Column="3" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Children\Interactable\wheatWeedInteractable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\Controllers\swirlingJumpController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\Controllers\rotatingStickController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\Cameras\shoulderCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Children\Interactable\monopodialInteractable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Children\Interactable\sympodialInteractable.cs" Line="50" Column="2" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Children\Interactable\rosetteInteractable.cs" Line="9" Column="38" />
+      <File FileName="Assets\Standard Assets\Scripts\My Scripts\L_Systems\L_System_Trail.cs" Line="30" Column="69" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
